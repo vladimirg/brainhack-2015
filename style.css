@@ -1,17 +1,74 @@
-h1{
-	color: red;
+span[class^=line] {
+
+	/*opacity on hover - lines:*/
+	/*opacity: 0.4;*/
+}
+
+span[class^=line]:hover { 
+	
+	/*opacity on hover - lines:*/
+    /*opacity: 1.0;*/
 }
 
 span[class^=word] {
-	margin-top: 3px;
-	margin-bottom: 3px;
-	display: block;
+
+	/*vertical:*/
+	/*margin-top: 3px;*/
+	/*margin-bottom: 3px;*/
+	/*display: block;*/
+
+	/*opacity on hover - words only:*/
+	/*opacity: 0.4;*/
+
+	/*spacing between letters:*/
+	/*letter-spacing: 2px;*/
 }
+
+span[class^=word]:hover { 
+
+	/*opacity on hover - words only:*/
+    /*opacity: 1.0;*/
+}
+
+
+span[class^=char]{
+
+}
+
 
 span[class^=char]:nth-last-child(2){
+
+	/*highlight last letters:*/
 	color: red;
+
+	/*animate highlighting:*/
+	animation: myfirst 2s infinite;
+	-moz-animation:myfirst 2s infinite;
+	-webkit-animation: myfirst 2s infinite;
 }
 
+/*highlight last letters:*/
 span[class^=char]:last-child{
+
+	/*highlight last letters:*/
 	color: red;
+
+	/*animate highlighting:*/
+	animation: myfirst 2s infinite;
+	-moz-animation:myfirst 2s infinite;
+	-webkit-animation: myfirst 2s infinite;
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+	0%   {color:black;}
+	50%  {color:red;}
+	100%   {color:black;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+	0%   {color:black;}
+	50%  {color:red;}
+	100%   {color:black;}
 }

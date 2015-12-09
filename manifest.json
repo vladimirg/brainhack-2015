@@ -11,7 +11,7 @@
 
 	"content_scripts": [
 		{
-			"matches": ["http://stackoverflow.com/users/233721/*", "https://he.wikipedia.org/wiki/*", "http://www.ynet.co.il/*"],
+			"matches": ["http://www.facebook.com/*", "http://stackoverflow.com/users/233721/*", "https://he.wikipedia.org/wiki/*", "http://www.ynet.co.il/*"],
 			"js": ["jquery-1.6.2.js", "jquery.lettering.js", "main.js"],
 			"css": ["style.css"]
 		}
