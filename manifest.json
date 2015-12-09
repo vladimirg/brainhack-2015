@@ -3,10 +3,16 @@
 	"name": "Psammomys obesus",
 	"version": "0.1",
 	
+ 	"background":
+    {
+        "scripts": ["jquery-1.6.2.js", "jquery.lettering.js", "background.js"]
+    },
+
 	"content_scripts": [
 		{
 			"matches": ["http://stackoverflow.com/users/233721/*"],
-			"js": ["main.js"]
+			"js": ["jquery-1.6.2.js", "jquery.lettering.js", "main.js"],
+			"css": ["style.css"]
 		}
 	]
 }
