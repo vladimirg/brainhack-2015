@@ -5,7 +5,8 @@
 	
  	"background":
     {
-        "scripts": ["jquery-1.6.2.js", "jquery.lettering.js", "background.js"]
+        "scripts": ["jquery-1.6.2.js", "jquery.lettering.js", "background.js"],
+        "css": ["style.css"]
     },
 
 	"content_scripts": [

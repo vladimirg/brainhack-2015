@@ -1,0 +1,12 @@
+h1{
+	color: red;
+}
+
+span[class^=word] {
+	color: red;
+}
+
+
+.firstHeading {
+	color: blue;
+}
