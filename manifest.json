@@ -10,9 +10,16 @@
 
 	"content_scripts": [
 		{
-			"matches": ["http://stackoverflow.com/users/233721/*"],
+			"matches": ["http://stackoverflow.com/users/233721/*", "https://he.wikipedia.org/wiki/*"],
 			"js": ["jquery-1.6.2.js", "jquery.lettering.js", "main.js"],
 			"css": ["style.css"]
 		}
-	]
+	],
+	"browser_action": {
+		"default_icon": "mascot64.png",
+		"default_popup": "/vertical/vertical.html"
+  	},
+  	"permissions": [
+   		"activeTab"
+   	]
 }
