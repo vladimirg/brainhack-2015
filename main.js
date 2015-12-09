@@ -6,6 +6,6 @@ btn.appendChild(t);
 document.body.appendChild(btn);
 
 $(document).ready(function() {
-  $(".mw-content-rtl p").lettering('words');
-  
+  // $(".mw-content-rtl p").lettering('words').children('span').lettering();
+  $("p").lettering('words').children('span').lettering();
 });
