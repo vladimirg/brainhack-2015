@@ -33,21 +33,18 @@ span[class^=word]:hover {
 
 span[class^=char]{
 
-}
-
+}	
 
 span[class^=char]:nth-last-child(2){
 
 	/*highlight last letters:*/
 	color: red;
-
 	/*animate highlighting:*/
 	animation: myfirst 2s infinite;
 	-moz-animation:myfirst 2s infinite;
 	-webkit-animation: myfirst 2s infinite;
 }
 
-/*highlight last letters:*/
 span[class^=char]:last-child{
 
 	/*highlight last letters:*/

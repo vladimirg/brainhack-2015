@@ -1,0 +1,20 @@
+h1{
+    color: red;
+}
+
+span[class^=word] {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    display: block;
+}
+
+span[class^=char]:nth-last-child(2){
+    color: red;
+}
+
+span[class^=char]:last-child{
+    color: red;
+}
+span[class^=char]{
+    background-color: #5ea533;
+}
