@@ -27,9 +27,6 @@ $(document).ready(function() {
 
       // load the css file
 
-    $("p, li").lettering('lines').children('span').lettering('words').children('span').lettering();
-	// add_dash_to_end_of_line();
-
     loadCSS(chrome.extension.getURL("style.css"));
     // Find the CSS we just loaded
     var stylesheet = undefined;
@@ -89,6 +86,12 @@ $(document).ready(function() {
               stylesheet.insertRule(`span[class^=word] { letter-spacing: ${items.letterSpacing}px; }`, settings_enumerator); 
               settings_enumerator++;
           }
+
+          if (items.disableRunningOnAllPage){
+            $("p, li").lettering('lines').children('span').lettering('words').children('span').lettering();
+            // add_dash_to_end_of_line();
+          }
+
         });;
     });
 });
