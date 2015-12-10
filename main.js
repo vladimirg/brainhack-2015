@@ -120,7 +120,7 @@ $(document).ready(function() {
             } else {
               interval = setInterval(function () {
                 select(next_word($("span.selected")))
-              }, 2000);
+              }, 500);
             }
           }
         });
