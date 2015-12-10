@@ -54,7 +54,7 @@ function restore_options() {
     document.getElementById('should-animate-first-letter').checked = items.shouldAnimateFirstLetter;
     document.getElementById('should-letter-spacing').checked = items.shouldLetterSpacing;
     document.getElementById('letter-spacing').value = items.letterSpacing;
-    document.getElementById('disable-running-on-all-page').checked = disableRunningOnAllPage;
+    document.getElementById('disable-running-on-all-page').checked = items.disableRunningOnAllPage;
   });
 }
 
