@@ -1,4 +1,6 @@
-console.log("in makeSelectionReadable.js!");
-
 var selection = document.getSelection();
-console.log(selection);
+
+for (var rangeIx = 0; rangeIx < selection.rangeCount; rangeIx++) {
+    var range = selection.getRangeAt(rangeIx);
+    makeElementReadable($(range.commonAncestorContainer));
+}

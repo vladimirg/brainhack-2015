@@ -20,7 +20,7 @@ $(document).ready(function() {
 
       // load the css file
 
-    $("p, li").lettering('lines').children('span').lettering('words').children('span').lettering();
+    //makeElementReadable($("p, li"));
 	// add_dash_to_end_of_line();
 
     loadCSS(chrome.extension.getURL("style.css"));
