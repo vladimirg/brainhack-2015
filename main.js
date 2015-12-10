@@ -18,11 +18,7 @@ $(document).ready(function() {
      * function to load a given js file
      */
 
-      // load the css file
-
-    //makeElementReadable($("p, li"));
-	// add_dash_to_end_of_line();
-
+    // load the css file
     loadCSS(chrome.extension.getURL("style.css"));
     // Find the CSS we just loaded
     var stylesheet = undefined;
@@ -82,6 +78,12 @@ $(document).ready(function() {
               stylesheet.insertRule(`span[class^=word] { letter-spacing: ${items.letterSpacing}px; }`, settings_enumerator); 
               settings_enumerator++;
           }
+
+          if (items.disableRunningOnAllPage){
+            makeElementReadable($("p, li"));
+            // add_dash_to_end_of_line();
+          }
+
         });;
     });
 });
