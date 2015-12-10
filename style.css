@@ -33,6 +33,7 @@ span.selected[class^=word]{
 
 	/*opacity on hover - words only:*/
     opacity: 1.0;
+	font-weight: bold;
 }
 
 
