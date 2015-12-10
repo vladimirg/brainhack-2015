@@ -2,18 +2,28 @@
 	"manifest_version": 2,
 	"name": "Psammomys obesus",
 	"version": "0.1",
-	
+
  	"background":
     {
         "scripts": ["jquery-1.6.2.js", "jquery.lettering.js", "background.js"],
         "css": ["style.css"]
     },
 
+	"options_ui": {
+		// Required.
+		"page": "options.html",
+		// Recommended.
+		"chrome_style": true
+		// Not recommended; only provided for backwards compatibility,
+		// and will be unsupported in a future version of Chrome (TBD).
+		//"open_in_tab": true
+	},
+
+
 	"content_scripts": [
 		{
-			"matches": ["http://stackoverflow.com/users/233721/*", "https://he.wikipedia.org/wiki/*", "http://www.ynet.co.il/*"],
-			"js": ["jquery-1.6.2.js", "jquery.lettering.js", "main.js"],
-			"css": ["style.css"]
+			"matches": ["http://www.facebook.com/*", "http://stackoverflow.com/users/233721/*", "https://he.wikipedia.org/wiki/*", "http://www.ynet.co.il/*"],
+			"js": ["jquery-1.6.2.js", "jquery.lettering.js", "main.js"]
 		}
 	],
 	"browser_action": {
@@ -21,10 +31,12 @@
 		"default_popup": "/vertical/vertical.html"
   	},
   	"permissions": [
+        "storage",
    		"activeTab",
 		"contextMenus",
 		"tabs"],
-	"icons": {
-		"64": "mascot64.png"
-	}
+	"web_accessible_resources": [
+		"style.css",
+		"style2.css"
+	]
 }
