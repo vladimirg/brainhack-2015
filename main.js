@@ -85,45 +85,47 @@ $(document).ready(function() {
               settings_enumerator++;
           }
 
-          select = function(element){
-            $("span.selected").removeClass("selected");
-            $(element).addClass("selected").focus();
-          };
-          next_word = function(element) {
-            var $words = $("span[class^=word]");
-            return $words.eq($words.index(element) + 1);
-          };
-          prev_word = function(element) {
-            var $words = $("span[class^=word]");
-            return $words.eq($words.index(element) - 1);
-          };
-          $("span[class^=word]").click(function() {
-            select(this);
-          });
-          var interval = null;
-          $("body").keydown(function(e) {
-            if (e.keyCode == 79) {
-              select(prev_word($("span.selected")));
-            } else if (e.keyCode == 80) {
-              select(next_word($("span.selected")));
-            } else if (e.keyCode == 77) {
-              if (interval) {
-                window.clearInterval(interval);
-                interval = null;
-              } else {
-                interval = setInterval(function () {
-                  select(next_word($("span.selected")))
-                }, 2000);
-              }
-            }
-          });
-        });
+
+
           if (!items.disableRunningOnAllPage){
             makeElementReadable($("p, li"));
             // add_dash_to_end_of_line();
           }
 
-        });;
+        select = function(element){
+          $("span.selected").removeClass("selected");
+          $(element).addClass("selected").focus();
+        };
+        next_word = function(element) {
+          var $words = $("span[class^=word]");
+          return $words.eq($words.index(element) + 1);
+        };
+        prev_word = function(element) {
+          var $words = $("span[class^=word]");
+          return $words.eq($words.index(element) - 1);
+        };
+        $("span[class^=word]").click(function() {
+          select(this);
+        });
+        var interval = null;
+        $("body").keydown(function(e) {
+          if (e.keyCode == 79) {
+            select(prev_word($("span.selected")));
+          } else if (e.keyCode == 80) {
+            select(next_word($("span.selected")));
+          } else if (e.keyCode == 77) {
+            if (interval) {
+              window.clearInterval(interval);
+              interval = null;
+            } else {
+              interval = setInterval(function () {
+                select(next_word($("span.selected")))
+              }, 2000);
+            }
+          }
+        });
+
+        });
     });
 });
 
