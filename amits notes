@@ -1,0 +1,34 @@
+* add all features
+* hilight last / first letter
+* 
+
+
+
+feature list:
+-------------
+
+Change font color
+(on off V
+color) V
+
+Change background color
+(on off V
+color) V 
+
+Vertical sentences 
+(on off)
+
+Highlight on hover
+(on off & if vertical is turned on it should be another one)
+
+Paint the last letter
+(on off
+colors)
+
+last letter animation
+(on off)
+
+Letter spacing - double the spacing between letters (also words?)
+(on off
+number of pixels)
+
