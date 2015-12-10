@@ -95,7 +95,6 @@ $(document).ready(function() {
             while(element.length != 0){
               element.css("background-color", items.backgroundColor)
               element = element.parent();
-            }
           }
 
           select = function(element){
@@ -126,7 +125,7 @@ $(document).ready(function() {
               } else {
                 interval = setInterval(function () {
                   select(next_word($("span.selected")))
-                }, 2000);
+                }, 500);
               }
             }
           });
