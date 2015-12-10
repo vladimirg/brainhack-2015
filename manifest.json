@@ -27,8 +27,7 @@
 		}
 	],
 	"browser_action": {
-		"default_icon": "Re128.png",
-		"default_popup": "/vertical/vertical.html"
+		"default_icon": "Re128.png"
   	},
   	"permissions": [
         "storage",
