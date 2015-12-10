@@ -29,6 +29,11 @@ span[class^=word]:hover {
 	/*opacity on hover - words only:*/
     /*opacity: 1.0;*/
 }
+span.selected[class^=word]{
+
+	/*opacity on hover - words only:*/
+    opacity: 1.0;
+}
 
 
 span[class^=char]{

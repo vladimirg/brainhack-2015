@@ -8,7 +8,7 @@ document.body.appendChild(btn);
 // should only work when the right configuration flag has been turned on.
 function add_dash_to_end_of_line(){
 	console.log('blat');
-	$("span[class^=word]").each(function(index, element){ 
+	$("span[class^=word]").each(function(index, element){
 		$(element).text($(element).text() + "/");
 	});
 }
@@ -45,9 +45,42 @@ $(document).ready(function() {
     stylesheet.insertRule(`span[class^=char] { background-color: ${items.backgroundColor}; }`, 1);
     //stylesheet.insertRule('span[class^=char]:last-child{color: green}', 0);
     //items.favoriteColor;
+
+    select = function(element){
+      $("span.selected").removeClass("selected");
+      $(element).addClass("selected").focus();
+    };
+    next_word = function(element) {
+      var $words = $("span[class^=word]");
+      return $words.eq($words.index(element) + 1);
+    };
+    prev_word = function(element) {
+      var $words = $("span[class^=word]");
+      return $words.eq($words.index(element) - 1);
+    };
+    $("span[class^=word]").click(function() {
+      select(this);
+    });
+    var interval = null;
+    $("body").keydown(function(e) {
+      if (e.keyCode == 79) {
+        select(prev_word($("span.selected")));
+      } else if (e.keyCode == 80) {
+        select(next_word($("span.selected")));
+      } else if (e.keyCode == 77) {
+        if (interval) {
+          window.clearInterval(interval);
+          interval = null;
+        } else {
+          interval = setInterval(function () {
+            select(next_word($("span.selected")))
+          }, 2000);
+        }
+      }
+    });
   });
 
 
-  
+
 
 });
