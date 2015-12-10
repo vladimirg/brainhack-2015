@@ -21,6 +21,10 @@
 		"default_popup": "/vertical/vertical.html"
   	},
   	"permissions": [
-   		"activeTab"
-   	]
+   		"activeTab",
+		"contextMenus",
+		"tabs"],
+	"icons": {
+		"64": "mascot64.png"
+	}
 }
