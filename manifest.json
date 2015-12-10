@@ -27,7 +27,7 @@
 		}
 	],
 	"browser_action": {
-		"default_icon": "mascot64.png",
+		"default_icon": "logo64.png",
 		"default_popup": "/vertical/vertical.html"
   	},
   	"permissions": [
@@ -38,5 +38,10 @@
 	"web_accessible_resources": [
 		"style.css",
 		"style2.css"
-	]
+	],
+	"icons": {
+      "16": "logo32.png",
+      "48": "logo64.png",
+      "128": "logo64.png"
+    }
 }
