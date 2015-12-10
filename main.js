@@ -79,7 +79,7 @@ $(document).ready(function() {
               settings_enumerator++;
           }
 
-          if (items.disableRunningOnAllPage){
+          if (!items.disableRunningOnAllPage){
             makeElementReadable($("p, li"));
             // add_dash_to_end_of_line();
           }

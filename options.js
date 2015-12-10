@@ -12,7 +12,7 @@ function save_options() {
     shouldPaintFirstLetter: document.getElementById('should-paint-first-letter').checked,
     shouldAnimateFirstLetter: document.getElementById('should-animate-first-letter').checked,
     shouldLetterSpacing: document.getElementById('should-letter-spacing').checked,
-    letterSpacing: document.getElementById('letter-spacing').value
+    letterSpacing: document.getElementById('letter-spacing').value, 
     disableRunningOnAllPage: document.getElementById('disable-running-on-all-page').checked,
   }, function() {
     // Update status to let user know options were saved.
