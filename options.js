@@ -12,7 +12,8 @@ function save_options() {
     shouldPaintFirstLetter: document.getElementById('should-paint-first-letter').checked,
     shouldAnimateFirstLetter: document.getElementById('should-animate-first-letter').checked,
     shouldLetterSpacing: document.getElementById('should-letter-spacing').checked,
-    letterSpacing: document.getElementById('letter-spacing').value
+    letterSpacing: document.getElementById('letter-spacing').value, 
+    disableRunningOnAllPage: document.getElementById('disable-running-on-all-page').checked,
   }, function() {
     // Update status to let user know options were saved.
     var status = document.getElementById('status');
@@ -38,7 +39,8 @@ function restore_options() {
     shouldPaintFirstLetter: false,
     shouldAnimateFirstLetter: false,
     shouldLetterSpacing: false,
-    letterSpacing: '2'
+    letterSpacing: '2',
+    disableRunningOnAllPage: false
   }, function(items) {
     document.getElementById('should-change-text-color').checked = items.shouldChangeTextColor;
     document.getElementById('text-color').value = items.textColor;
@@ -52,6 +54,7 @@ function restore_options() {
     document.getElementById('should-animate-first-letter').checked = items.shouldAnimateFirstLetter;
     document.getElementById('should-letter-spacing').checked = items.shouldLetterSpacing;
     document.getElementById('letter-spacing').value = items.letterSpacing;
+    document.getElementById('disable-running-on-all-page').checked = disableRunningOnAllPage;
   });
 }
 

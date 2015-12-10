@@ -1,10 +1,3 @@
-//Creating Elements
-var btn = document.createElement("BUTTON")
-var t = document.createTextNode("CLICK ME");
-btn.appendChild(t);
-//Appending to DOM 
-document.body.appendChild(btn);
-
 // should only work when the right configuration flag has been turned on.
 function add_dash_to_end_of_line(){
 	console.log('blat');
@@ -25,11 +18,7 @@ $(document).ready(function() {
      * function to load a given js file
      */
 
-      // load the css file
-
-    $("p, li").lettering('lines').children('span').lettering('words').children('span').lettering();
-	// add_dash_to_end_of_line();
-
+    // load the css file
     loadCSS(chrome.extension.getURL("style.css"));
     // Find the CSS we just loaded
     var stylesheet = undefined;
@@ -96,7 +85,6 @@ $(document).ready(function() {
               settings_enumerator++;
           }
 
-
           select = function(element){
             $("span.selected").removeClass("selected");
             $(element).addClass("selected").focus();
@@ -130,5 +118,13 @@ $(document).ready(function() {
             }
           });
         });
+          if (!items.disableRunningOnAllPage){
+            makeElementReadable($("p, li"));
+            // add_dash_to_end_of_line();
+          }
+
+        });;
     });
 });
+
+chrome.runtime.sendMessage({action: "addReadableMenuItem"});
